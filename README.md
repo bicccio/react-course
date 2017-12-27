@@ -1,4 +1,4 @@
-# React Source
+# React course
 
 A minimal, light dev environment and the code used for a React course.
 
