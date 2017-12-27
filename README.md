@@ -1,6 +1,6 @@
 # React course
 
-A minimal, light dev environment and the code used for a React course.
+A minimal dev environment and the code used for a React course.
 
 ### Usage
 
