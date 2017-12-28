@@ -2,7 +2,7 @@
 
 ---
 
-### Cos'è React
+#### Programma - Giorno 1
 
 * Introduzione
   * Cos'è React
