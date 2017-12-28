@@ -1,4 +1,3 @@
-# Corso React - Giorno 1
+## Corso React - Giorno 1
 
 ---
-
