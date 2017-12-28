@@ -6,9 +6,9 @@
  */
 
 body {
-  background: red;
-  background-color: red;
-  font-size: 9px;
+  background: #fff;
+  background-color: #fff;
+  padding: 20px;
 }
 
 html:-webkit-full-screen-ancestor {
