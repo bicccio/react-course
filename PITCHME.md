@@ -16,6 +16,8 @@
 * Props & State
 * Lyfecycle methods
 
+<br>
+
 ---
 
 ### Cos'è React
