@@ -43,12 +43,12 @@ React si occupa solo della UI e necessità di componenti di terze parti per le a
 
 ### Come e perchè
 
-_f(data) => UI_
+**f(data) => UI**
 
-Funzioni pure senza effetti collatrerali. Un ingresso una uscita.
+Componenti com Funzioni pure dei parametri di ingresso senza effetti collatrerali. Un ingresso una uscita.
 
-prevedibilità del comportamento, facilità nel management dello stato dell'applicazione
+Prevedibilità del comportamento, facilità nel management dello stato dell'applicazione.
 
-_Virtual DOM_
+**Virtual DOM**
 
-semplificare le iterazioni con il DOM e migliorare le prestazioni
+Semplificare le iterazioni con il DOM e migliorare le prestazioni
