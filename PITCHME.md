@@ -7,16 +7,13 @@
 * Introduzione
   * Cos'è React
   * Storia
-  * Visrtual DOM
-    * diffing and reconciliation
+  * Virtual DOM
   * Flux and Unidirectional Data Flow
 * Raw React (vanilla javascript)
-* JSX babel es6
+* JSX, Babel, Es6
 * Componenti
 * Props & State
 * Lyfecycle methods
-
-<br><br>
 
 ---
 
