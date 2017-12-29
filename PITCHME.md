@@ -43,10 +43,18 @@ React si occupa solo della UI e necessità di componenti di terze parti per le a
 
 #### Come e perchè
 
-**f(data) => UI** - Componenti com Funzioni pure dei parametri di ingresso senza effetti collatrerali. Un ingresso una uscita.
+**f(data) => UI** - Componenti com funzioni pure dei parametri di ingresso. Un ingresso una uscita.
 
 Prevedibilità del comportamento, facilità nel management dello stato dell'applicazione.
 
-**Virtual DOM** - Rappresentazione visrtuale del DOM.
+**Virtual DOM** - Rappresentazione virtuale del DOM.
 
 Semplificare le iterazioni con il DOM e migliorare le prestazioni
+
+---
+
+#### Virtual DOM
+
+Problema: aumento della dinamicità delle applicazioni web (SPA, Ajax). Lentezza delle operazioni DOM (traverse and change)
+
+Soluzione: rappresentazione interna del DOM, indipendente dal browser, che astrae e semplifica le iterazioni con il DOM reale, permettendo il render selettivo dei soli componenti interessati da mutazioni dello stato dell'applicazione (eventi).
