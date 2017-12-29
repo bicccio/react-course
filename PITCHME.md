@@ -23,11 +23,11 @@ Nello stesso anno è stata utilizzata per realizzare Instagram.com e FacebookAds
 
 E' stata opensourced alla JSConf US nel maggio 2013.
 
-Chi usa React: Facebook, Instagram, Airbnb, Netflix, User, etc.
-
 ---
 
 ### Trend
+
+Chi usa React: Facebook, Instagram, Airbnb, Netflix, Uber, etc.
 
 ![Trend](/images/trend.png)
 
