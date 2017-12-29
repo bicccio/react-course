@@ -38,3 +38,17 @@ Chi usa React: Facebook, Instagram, Airbnb, Netflix, Uber, etc.
 Angular è un Framework completo che definisce la struttura di tutta l'applicazione.
 <br>
 React si occupa solo della UI e necessità di componenti di terze parti per le altre funzionalità (Routing, State manager, Ajax)
+
+---
+
+### Come e perchè
+
+_f(data) => UI_
+
+Funzioni pure senza effetti collatrerali. Un ingresso una uscita.
+
+prevedibilità del comportamento, facilità nel management dello stato dell'applicazione
+
+_Virtual DOM_
+
+semplificare le iterazioni con il DOM e migliorare le prestazioni
