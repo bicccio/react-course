@@ -15,14 +15,21 @@
 
 ### Cos'è React
 
-E' una libreria javascript sviluppata da Facebook ed Instagram per la costruzione di interfacce web.
-E' stata presentata per la prima volta da Facebook nel 2011, successivamente da Instagram nel 2012 ed
-è stata opensourced alla JSConf nel maggio 2013.
+E' una libreria javascript creata da Facebook ed Instagram per la costruzione di interfacce web.
+E' stata presentata per la prima volta da Facebook nel 2012 in una newsfeed. Nello stesso anno è stata utilizzata
+per realizzare Instagram.com e FacebookAds. E' stata opensourced alla JSConf US nel maggio 2013.
+Chi usa React: Facebook, Instagram, Airbnb, Netflix, User, etc.
+
+---
+
+### Trend
+
+![Trend](/images/trend.png)
 
 ---
 
 ### Differenze con Angular
 
-Angular è un Framework completo (chivi in mano) che definisce la struttura di tutta l'applicazione.
+Angular è un Framework completo che definisce la struttura di tutta l'applicazione.
 <br>
 React si occupa solo della UI e necessità di componenti di terze parti per le altre funzionalità (Routing, State manager, Ajax)
