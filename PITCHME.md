@@ -16,8 +16,13 @@
 ### Cos'è React
 
 E' una libreria javascript creata da Facebook ed Instagram per la costruzione di interfacce web.
-E' stata presentata per la prima volta da Facebook nel 2012 in una newsfeed. Nello stesso anno è stata utilizzata
-per realizzare Instagram.com e FacebookAds. E' stata opensourced alla JSConf US nel maggio 2013.
+
+E' stata presentata per la prima volta da Facebook nel 2012 in una newsfeed.
+
+Nello stesso anno è stata utilizzata per realizzare Instagram.com e FacebookAds.
+
+E' stata opensourced alla JSConf US nel maggio 2013.
+
 Chi usa React: Facebook, Instagram, Airbnb, Netflix, User, etc.
 
 ---
