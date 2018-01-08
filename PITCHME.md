@@ -61,16 +61,20 @@ Soluzione: rappresentazione interna del DOM, indipendente dal browser, che astra
 
 ---
 
-#### ReactElements vs ReactComponents
+#### ReactElements
 
-ReactElements: rappresentazione interna, immutabile e stateless interna al VirtualDom di un elemento DOM. Il metodo render lo trasforma in un normale elemento del DOM. (esempio Raw React)
+Rappresentazione interna, immutabile e stateless interna al VirtualDom di un elemento DOM. Il metodo render lo trasforma in un normale elemento del DOM. (esempio Raw React)
 
 ```
 var root = React.createElement('div');
 ReactDOM.render(root, document.getElementById('example'));
 ```
 
-ReactComponents: i componenti sono stateful e vengono renderizzati ad ogni cambiamento dello stato.
+---
+
+#### ReactComponents
+
+I componenti sono stateful e vengono renderizzati ad ogni cambiamento dello stato.
 
 ```
 var CommentBox = React.createClass({
