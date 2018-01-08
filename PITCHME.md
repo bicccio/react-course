@@ -138,9 +138,9 @@ Le modifiche possono divenire impredicibili.
 
 #### Flux Functional approach
 
-Flux usa un approccio funzionale.
+La view è una funzione pura dello stato applicativo.
 
-La view è una funzione dello stato applicativo. In risposta a cambiamenti dello stato la view viene rirenderizzata.
+In risposta a cambiamenti dello stato la view viene rirenderizzata.
 
 Uno stato una visualizzazione. Migliore predicibilità.
 
@@ -150,6 +150,6 @@ Uno stato una visualizzazione. Migliore predicibilità.
 
 I cambiamenti di stato vengono attuati da Actions
 
-Le azioni sono il solo modo di agire sullo store.
+Le Actions sono il solo modo di agire sullo store.
 
 I componenti si registrano sullo store per essere notificati dei cambiamenti e vengono automaticamente rirenderizzati utilizzando i nuovi dati.
