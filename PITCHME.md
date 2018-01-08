@@ -94,10 +94,8 @@ var HelloWorld = React.createClass({
 
 I ReactComponent vengono convertiti in ReactElement e quindi inseriti nel VirtualDOM.
 
-Viene eseguito un confronto con l'esistente e solo le parti strettamente interessate vengono aggiornate.
+Viene eseguito un confronto con l'esistente (diffing) e solo le parti interessate vengono aggiornate (reconciliation).
 
-La comparazione e l'aggiornamento vengono fatti dagli algoritmi di diffing e reconciliation.
-
-Una volta che React conosce le differenze applica le modifiche al DOM reale.
+Una volta che React conosce le differenze, applica le modifiche al DOM reale.
 
 Il punto è che il processo e molto più veloce ed efficiente.
