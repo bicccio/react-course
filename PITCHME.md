@@ -109,3 +109,12 @@ Il punto è che il processo e molto più veloce ed efficiente.
 Reflow e Painting rallentano al crescere del DOM.
 
 il Virtual DOM minimizza i tempi di questi due passi.
+
+---
+
+#### Flux e unidirectional data Flow
+
+In flux, valori immutabili vengono passati ai componenti che in risposta ad eventi chimano callback che agiscono
+su uno store centrale unica fonte di verità nell'applicazione.
+
+Il motto è **properties flow down, actions flow up**
