@@ -99,3 +99,13 @@ Viene eseguito un confronto con l'esistente (diffing) e solo le parti interessat
 Una volta che React conosce le differenze, applica le modifiche al DOM reale.
 
 Il punto è che il processo e molto più veloce ed efficiente.
+
+---
+
+#### DOM Render
+
+![Trend](/images/dom-render.png)
+
+Reflow e Painting rallentanbo al crescere del DOM.
+
+il Virtual DOM minimizza i tempi di questi due passi.
