@@ -106,6 +106,6 @@ Il punto è che il processo e molto più veloce ed efficiente.
 
 ![Trend](/images/dom-render.png)
 
-Reflow e Painting rallentanbo al crescere del DOM.
+Reflow e Painting rallentano al crescere del DOM.
 
 il Virtual DOM minimizza i tempi di questi due passi.
