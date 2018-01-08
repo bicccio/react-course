@@ -38,7 +38,7 @@ var App = React.createElement(
     {
       style: { background: "#efefef", padding: "10px" },
       onClick: function() {
-        alert("miao");
+        alert("Benvenuti!");
       }
     },
     "Corso React"
