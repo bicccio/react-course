@@ -127,3 +127,10 @@ In Angular il two way binding modifica la view ad ogni cambiamento del model ed 
 Il problema in applicazioni complesse sono gli update in cascata, una modifica ne scatena un'altra che ne scatena un'altra, etc.
 
 Le modifiche possono divenire impredicibili.
+
+---
+
+### Flux Data Flow
+
+![Trend](/images/dom-render.png)
+
