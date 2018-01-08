@@ -1,49 +1,41 @@
 import React from "react";
 
-var listDay1 = React.createElement(
-  "li",
-  {},
-  React.createElement("h2", {}, "Giorno 1"),
-  React.createElement(
-    "ul",
-    null,
-    React.createElement(
-      "li",
-      null,
-      React.createElement("a", { target: "blank", href: "https://reactjs.org/" }, "React")
-    )
-  )
-);
+var elements = [
+  { title: "Giorno 1", label: "React", link: "https://reactjs.org/" },
+  { title: "Giorno 2", label: "Redux", link: "https://redux.js.org/" }
+];
 
-var listDay2 = React.createElement(
-  "li",
-  {},
-  React.createElement("h2", {}, "Giorno 2"),
-  React.createElement(
-    "ul",
+var listElement = function(element) {
+  return React.createElement(
+    "li",
     null,
+    React.createElement("h2", null, element.title),
     React.createElement(
-      "li",
+      "ul",
       null,
-      React.createElement("a", { target: "blank", href: "https://redux.js.org/" }, "Redux")
+      React.createElement("li", null, React.createElement("a", { target: "blank", href: element.link }, element.label))
     )
-  )
-);
+  );
+};
+
+var listElements = elements.map(function(element) {
+  return listElement(element);
+});
 
 var App = React.createElement(
   "div",
-  {},
+  null,
   React.createElement(
     "h1",
     {
       style: { background: "#efefef", padding: "10px" },
       onClick: function() {
-        alert("Benvenuti!");
+        alert("miao");
       }
     },
     "Corso React"
   ),
-  React.createElement("ul", {}, listDay1, listDay2)
+  React.createElement("ul", null, listElements)
 );
 
 export default App;
