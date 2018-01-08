@@ -120,7 +120,7 @@ Il motto è **properties flow down, actions flow up**
 
 ---
 
-### differenze con Angular
+### Differenze con Angular
 
 In Angular il two way binding modifica la view ad ogni cambiamento del model ed il model in risposta ad eventi sulla view.
 
@@ -133,3 +133,18 @@ Le modifiche possono divenire impredicibili.
 ### Flux Data Flow
 
 ![Trend](/images/flux.png)
+
+---
+
+Flux usa un approccio funzionale. La view è una funzione dello stato applicativo. In risposta a cambiamenti dello stato la view viene rirenderizzata.
+Uno stato una visualizzazione. Migliore predicibilità.
+
+---
+
+### Flux: Actions
+
+I cambiamenti di stato vengono attuati da Actions
+
+Le azioni sono il solo modo di agire sullo store.
+
+I componenti si registrano sullo store per essere notificati dei cambiamenti e vengono automaticamente rirenderizzati utilizzando i nuovi dati.
