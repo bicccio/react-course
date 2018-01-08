@@ -132,5 +132,4 @@ Le modifiche possono divenire impredicibili.
 
 ### Flux Data Flow
 
-![Trend](/images/dom-render.png)
-
+![Trend](/images/flux.png)
