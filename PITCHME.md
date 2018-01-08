@@ -77,13 +77,23 @@ ReactDOM.render(root, document.getElementById('example'));
 I componenti sono stateful e vengono renderizzati ad ogni cambiamento dello stato.
 
 ```
-var CommentBox = React.createClass({
+var HelloWorld = React.createClass({
   render: function() {
     return (
-      <div className="commentBox">
-        Hello, world! I am a CommentBox.
+      <div className="helloWorld">
+        Hello, world!.
       </div>
     );
   }
 });
 ```
+
+---
+
+#### Components => Elements => VirtualDOM
+
+I ReactComponent vengono convertiti in ReactElement che vengono inseriti nel virtual DOM. Viene ederguito un confronto con l'esistente e solo le parti strettamente interessate vengono aggiornate.
+
+La comparazione e l'aggiornamento vengono fatti dagli algoritmi di diffing e reconciliation.
+
+Il punto è che il processo e molto più veloce ed efficiente.
