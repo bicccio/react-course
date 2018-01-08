@@ -114,7 +114,16 @@ il Virtual DOM minimizza i tempi di questi due passi.
 
 #### Flux e unidirectional data Flow
 
-In flux, valori immutabili vengono passati ai componenti che in risposta ad eventi chimano callback che agiscono
-su uno store centrale unica fonte di verità nell'applicazione.
+In flux, valori immutabili vengono passati ai componenti che in risposta ad eventi chiamano callback che agiscono su uno store centrale.
 
 Il motto è **properties flow down, actions flow up**
+
+---
+
+### differenze con Angular
+
+In Angular il two way binding modifica la view ad ogni cambiamento del model ed il model in risposta ad eventi sulla view.
+
+Il problema in applicazioni complesse sono gli update in cascata, una modifica ne scatena un'altra che ne scatena un'altra, etc.
+
+Le modifiche possono divenire impredicibili.
