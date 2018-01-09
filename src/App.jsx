@@ -7,39 +7,68 @@ var elements = [
 
 class ListElement extends React.Component {
   render() {
-    return React.createElement(
-      "li",
-      null,
-      React.createElement("h2", null, this.props.title),
-      React.createElement(
-        "ul",
-        null,
-        this.props.items.map(item => {
-          return React.createElement(
-            "li",
-            null,
-            React.createElement("a", { target: "blank", href: item.link }, item.label)
-          );
-        })
-      )
+    const { title, items } = this.props;
+    return (
+      <li>
+        <h2>{title}</h2>
+        <ul>
+          {items.map(item => {
+            return (
+              <li>
+                <a href={item.link} target="_blank">
+                  {item.label}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </li>
     );
   }
 }
 
-var listElements = elements.map(function(element) {
-  return React.createElement(ListElement, { title: element.title, items: element.items });
-});
+class ListElements extends React.Component {
+  render() {
+    return (
+      <div>
+        {this.props.elements.map(element => {
+          return <ListElement title={element.title} items={element.items} />;
+        })}
+      </div>
+    );
+  }
+}
 
-var list = React.createElement("ul", null, listElements);
+class List extends React.Component {
+  render() {
+    return (
+      <ul>
+        <ListElements elements={this.props.elements} />
+      </ul>
+    );
+  }
+}
 
-var titleStyle = { background: "#efefef", padding: "10px" };
+class Title extends React.Component {
+  render() {
+    const titleStyle = { background: "#efefef", padding: "10px" };
+    return (
+      <h1 style={titleStyle} onClick={e => this.onTitleClick(e)}>
+        {this.props.title}
+      </h1>
+    );
+  }
+}
 
-var onTitleClick = function() {
-  alert("benvenuti!");
-};
-
-var title = React.createElement("h1", { style: titleStyle, onClick: onTitleClick }, "Corso React");
-
-var App = React.createElement("div", null, title, list);
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Title title="Corso React" />
+        <List elements={elements} />
+      </div>
+    );
+  }
+}
 
 export default App;
