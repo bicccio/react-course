@@ -50,6 +50,10 @@ class List extends React.Component {
 }
 
 class Title extends React.Component {
+  onTitleClick = () => {
+    alert("benvenuti!");
+  };
+
   render() {
     const titleStyle = { background: "#efefef", padding: "10px" };
     return (
