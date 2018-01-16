@@ -10,5 +10,6 @@ require("../styles/home.css");
 import React from "react";
 import ReactDOM from "react-dom";
 import ArtistSearch from "./App.jsx";
+import artistSearch from "./reducers/artistReducers";
 
 ReactDOM.render(<ArtistSearch />, document.getElementById("react-root"));
