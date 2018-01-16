@@ -90,13 +90,7 @@ class ArtistSearch extends React.Component {
     };
   }
 
-  // Mount LyfeCycle
-  componentWillMount = () => {
-    console.log("ArtistSearch:componentWillMount");
-  };
-
   componentDidMount = () => {
-    console.log("ArtistSearch:omponentDidMount");
     axios
       .get('https://musicbrainz.org/ws/2/artist/?query="the cure"&fmt=json')
       .then(res => {
@@ -107,26 +101,9 @@ class ArtistSearch extends React.Component {
       });
   };
 
-  componentDidUnmount = () => {
-    console.log("ArtistSearch:componentDidUnmount");
-  };
-
-  componentWillReceiveProps = nextProps => {
-    console.log("ArtistSearch:componentWillReceiveProps");
-  };
-
   shouldComponentUpdate = (nextProps, nextState) => {
-    console.log("ArtistSearch:shouldComponentUpdate");
     if (this.state.search !== nextState.search) return false;
     return true;
-  };
-
-  componentWillUpdate = () => {
-    console.log("ArtistSearch:componentWillUpdate");
-  };
-
-  componentDidUpdate = () => {
-    console.log("ArtistSearch:componentDidUpdate");
   };
 
   onSearch() {
@@ -145,7 +122,6 @@ class ArtistSearch extends React.Component {
   };
 
   render() {
-    console.log("ArtistSearch:render");
     const { artists } = this.state;
     return (
       <div className="container">
