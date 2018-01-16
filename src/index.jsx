@@ -9,7 +9,16 @@ require("../styles/home.css");
 // Render the top-level React component
 import React from "react";
 import ReactDOM from "react-dom";
-import ArtistSearch from "./App.jsx";
-import artistSearch from "./reducers/artistReducers";
+import ArtistSearch from "./components/ArtistSearch.jsx";
+import artistReducer from "./reducers/artistReducers";
+import { createStore } from "redux";
 
-ReactDOM.render(<ArtistSearch />, document.getElementById("react-root"));
+const store = createStore(artistReducer);
+
+const render = () => {
+  ReactDOM.render(<ArtistSearch store={store} />, document.getElementById("react-root"));
+};
+
+render();
+
+store.subscribe(render);
