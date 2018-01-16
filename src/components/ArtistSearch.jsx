@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import Artist from "./Artist.jsx";
 import * as artistActions from "../actions/artistActions.js";
+import { bindActionCreators } from "redux";
 
 class ArtistSearch extends React.Component {
   constructor(props) {
@@ -70,9 +71,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    handleSearchChange: value => {
-      dispatch(artistActions.searchChangeAction(value));
-    },
+    handleSearchChange: bindActionCreators(artistActions.searchChangeAction, dispatch),
     handleSearch: artist => {
       axios.get(`https://musicbrainz.org/ws/2/artist/?query="${artist}"&fmt=json`).then(res => {
         dispatch(artistActions.loadArtistAction(res.data.artists));
