@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Artist from "./Artist.jsx";
+import * as artistActions from "../actions/artistActions.js";
 
 class ArtistSearch extends React.Component {
   constructor(props) {
@@ -29,11 +30,10 @@ class ArtistSearch extends React.Component {
   };
 
   handleSearchChange = e => {
-    this.props.handleSearchChange(e);
+    this.props.handleSearchChange(e.target.value);
   };
 
   render() {
-    console.log(this.props);
     const { artists } = this.props;
     return (
       <div className="container">
@@ -70,12 +70,12 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    handleSearchChange: e => {
-      dispatch({ type: "SEARCH_CHANGE", content: e.target.value });
+    handleSearchChange: value => {
+      dispatch(artistActions.searchChangeAction(value));
     },
     handleSearch: artist => {
       axios.get(`https://musicbrainz.org/ws/2/artist/?query="${artist}"&fmt=json`).then(res => {
-        dispatch({ type: "LOAD_ARTISTS", content: res.data.artists });
+        dispatch(artistActions.loadArtistAction(res.data.artists));
       });
     }
   };
