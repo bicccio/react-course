@@ -11,10 +11,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import ArtistSearch from "./components/ArtistSearch.jsx";
 import artistReducers from "./reducers/artistReducers";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
+import thunk from "redux-thunk";
 
-const store = createStore(artistReducers);
+const store = createStore(artistReducers, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>

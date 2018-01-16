@@ -72,11 +72,7 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     handleSearchChange: bindActionCreators(artistActions.searchChangeAction, dispatch),
-    handleSearch: artist => {
-      axios.get(`https://musicbrainz.org/ws/2/artist/?query="${artist}"&fmt=json`).then(res => {
-        dispatch(artistActions.loadArtistAction(res.data.artists));
-      });
-    }
+    handleSearch: bindActionCreators(artistActions.loadArtistAction, dispatch)
   };
 }
 
