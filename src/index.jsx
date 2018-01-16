@@ -10,10 +10,10 @@ require("../styles/home.css");
 import React from "react";
 import ReactDOM from "react-dom";
 import ArtistSearch from "./components/ArtistSearch.jsx";
-import artistReducer from "./reducers/artistReducers";
+import artistReducers from "./reducers/artistReducers";
 import { createStore } from "redux";
 
-const store = createStore(artistReducer);
+const store = createStore(artistReducers);
 
 const render = () => {
   ReactDOM.render(<ArtistSearch store={store} />, document.getElementById("react-root"));
