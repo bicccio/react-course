@@ -16,7 +16,7 @@ import { createStore } from "redux";
 const store = createStore(artistReducers);
 
 const render = () => {
-  ReactDOM.render(<ArtistSearch store={store} />, document.getElementById("react-root"));
+  ReactDOM.render(<ArtistSearch />, document.getElementById("react-root"));
 };
 
 render();
