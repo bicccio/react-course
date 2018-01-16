@@ -16,33 +16,25 @@ class ArtistSearch extends React.Component {
   };
 
   shouldComponentUpdate = (nextProps, nextState) => {
-    if (this.props.store.getState().search !== nextProps.store.getState().search) return false;
+    if (this.props.search !== nextProps.search) return false;
     return true;
   };
 
   onSearch() {
-    this.searchForArtist(this.props.store.getState().search);
+    this.searchForArtist(this.props.search);
   }
 
   searchForArtist = artist => {
-    console.log(artist);
-    axios
-      .get(`https://musicbrainz.org/ws/2/artist/?query="${artist}"&fmt=json`)
-      .then(res => {
-        console.log(res.data.artists);
-        this.props.store.dispatch({ type: "LOAD_ARTISTS", content: res.data.artists });
-      })
-      .catch(err => {
-        this.setState({ error: err.message });
-      });
+    this.props.handleSearch(artist);
   };
 
   handleSearchChange = e => {
-    this.props.store.dispatch({ type: "SEARCH_CHANGE", content: e.target.value });
+    this.props.handleSearchChange(e);
   };
 
   render() {
-    const artists = this.props.store.getState().artists;
+    console.log(this.props);
+    const { artists } = this.props;
     return (
       <div className="container">
         <h1>Artist Search</h1>
@@ -69,4 +61,26 @@ class ArtistSearch extends React.Component {
   }
 }
 
-export default ArtistSearch;
+function mapStateToProps(state) {
+  return {
+    search: state.search,
+    artists: state.artists
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    handleSearchChange: e => {
+      dispatch({ type: "SEARCH_CHANGE", content: e.target.value });
+    },
+    handleSearch: artist => {
+      axios.get(`https://musicbrainz.org/ws/2/artist/?query="${artist}"&fmt=json`).then(res => {
+        dispatch({ type: "LOAD_ARTISTS", content: res.data.artists });
+      });
+    }
+  };
+}
+
+import { connect } from "react-redux";
+
+export default connect(mapStateToProps, mapDispatchToProps)(ArtistSearch);

@@ -10,7 +10,6 @@ const artistSearch = (state = "", action) => {
 const artistList = (state = [], action) => {
   switch (action.type) {
     case "LOAD_ARTISTS":
-      console.log(action.content);
       return action.content.slice(0);
     default:
       return state;
