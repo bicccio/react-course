@@ -12,13 +12,13 @@ import ReactDOM from "react-dom";
 import ArtistSearch from "./components/ArtistSearch.jsx";
 import artistReducers from "./reducers/artistReducers";
 import { createStore } from "redux";
+import { Provider } from "react-redux";
 
 const store = createStore(artistReducers);
 
-const render = () => {
-  ReactDOM.render(<ArtistSearch />, document.getElementById("react-root"));
-};
-
-render();
-
-store.subscribe(render);
+ReactDOM.render(
+  <Provider store={store}>
+    <ArtistSearch />
+  </Provider>,
+  document.getElementById("react-root")
+);
