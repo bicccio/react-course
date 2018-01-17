@@ -11,14 +11,33 @@ class ArtistProfile extends React.Component {
     this.props.loadArtistProfileAction(this.props.match.params.id);
   };
 
-  //componentWillReceiveProps = nextProps => {};
+  buildLink = () => {
+    const profile = [];
+    if (this.props.artistProfile.relations) {
+      this.props.artistProfile.relations.map(relation => {
+        if (relation["target-type"] === "url") {
+          profile.push(
+            <div>
+              <a target="blank" href={relation.url.resource}>
+                {relation.type}
+              </a>
+            </div>
+          );
+        }
+      });
+    } else {
+      return <span />;
+    }
+    return profile;
+  };
 
   render() {
     const { artistProfile } = this.props;
-
     return (
-      <div className="col-xs-3">
+      <div className="container">
         <h1>{artistProfile.name}</h1>
+        <h4>Links</h4>
+        <div>{this.buildLink()}</div>
       </div>
     );
   }
