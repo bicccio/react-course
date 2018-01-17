@@ -16,11 +16,21 @@ const artistList = (state = [], action) => {
   }
 };
 
+const artistProfile = (state = {}, action) => {
+  switch (action.type) {
+    case "LOAD_ARTIST_PROFILE":
+      return Object.assign({}, action.content);
+    default:
+      return state;
+  }
+};
+
 import { combineReducers } from "redux";
 
 const artistReducers = combineReducers({
   search: artistSearch,
-  artists: artistList
+  artists: artistList,
+  artistProfile: artistProfile
 });
 
 export default artistReducers;

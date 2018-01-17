@@ -11,3 +11,11 @@ export const loadArtistAction = artist => {
     });
   };
 };
+
+export const loadArtistProfileAction = artist_key => {
+  return function(dispatch) {
+    axios.get(`https://musicbrainz.org/ws/2/artist/${artist_key}?inc=url-rels`).then(res => {
+      dispatch({ type: "LOAD_ARTIST_PROFILE", content: res.data });
+    });
+  };
+};

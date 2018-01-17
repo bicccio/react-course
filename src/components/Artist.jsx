@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Artist extends React.Component {
   constructor(props) {
@@ -70,10 +71,12 @@ class Artist extends React.Component {
     const list = this.compileList(artist);
 
     return (
-      <div className="col-xs-3" style={style}>
-        <h4>{artist.name}</h4>
-        <ul>{list}</ul>
-      </div>
+      <Link to={"/profile/" + artist.id}>
+        <div className="col-xs-3" style={style}>
+          <h4>{artist.name}</h4>
+          <ul>{list}</ul>
+        </div>
+      </Link>
     );
   }
 }
