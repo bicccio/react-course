@@ -19,3 +19,7 @@ export const loadArtistProfileAction = artist_key => {
     });
   };
 };
+
+export const removeArtistAction = index => {
+  return { type: "REMOVE_ARTIST", content: index };
+};
