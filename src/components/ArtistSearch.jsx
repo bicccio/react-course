@@ -38,7 +38,6 @@ class ArtistSearch extends React.Component {
     const { artists } = this.props;
     return (
       <div className="container">
-        <h1>Artist Search</h1>
         <div>
           <label>label</label>
           <input
