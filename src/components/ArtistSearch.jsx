@@ -53,8 +53,8 @@ class ArtistSearch extends React.Component {
         </button>
         <div className="row">
           {artists &&
-            artists.map(artist => {
-              return <Artist artist={artist} />;
+            artists.map((artist, index) => {
+              return <Artist i={index} delete={this.props.handleRemove} artist={artist} />;
             })}
         </div>
       </div>
@@ -72,7 +72,8 @@ function mapStateToProps(state) {
 function mapDispatchToProps(dispatch) {
   return {
     handleSearchChange: bindActionCreators(artistActions.searchChangeAction, dispatch),
-    handleSearch: bindActionCreators(artistActions.loadArtistAction, dispatch)
+    handleSearch: bindActionCreators(artistActions.loadArtistAction, dispatch),
+    handleRemove: bindActionCreators(artistActions.removeArtistAction, dispatch)
   };
 }
 

@@ -19,15 +19,14 @@ class Artist extends React.Component {
   };
 
   componentWillReceiveProps = nextProps => {
-    this.state = {
-      style: { background: "#fff", color: "#000" }
-    };
     if (nextProps.artist.gender === "male") {
       this.setState({ style: { background: "#99ccff", color: "#fff" } });
-    }
-
-    if (nextProps.artist.gender === "female") {
+    } else if (nextProps.artist.gender === "female") {
       this.setState({ style: { background: "#ff99cc", color: "#fff" } });
+    } else {
+      this.state = {
+        style: { background: "#fff", color: "#000" }
+      };
     }
   };
 
@@ -52,6 +51,12 @@ class Artist extends React.Component {
     return list;
   };
 
+  delete = e => {
+    e.preventDefault();
+    console.log(this.props);
+    this.props.delete(this.props.i);
+  };
+
   render() {
     const { artist } = this.props;
     let genre = "";
@@ -73,6 +78,9 @@ class Artist extends React.Component {
       <div className="col-xs-3" style={style}>
         <h4>{artist.name}</h4>
         <ul>{list}</ul>
+        <a href="#" onClick={e => this.delete(e)}>
+          delete
+        </a>
       </div>
     );
   }

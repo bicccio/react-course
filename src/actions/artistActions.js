@@ -11,3 +11,7 @@ export const loadArtistAction = artist => {
     });
   };
 };
+
+export const removeArtistAction = index => {
+  return { type: "REMOVE_ARTIST", content: index };
+};
